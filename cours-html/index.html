@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Titre de la page -->
+    <title>Cours HTML</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icone de l'onglet dde navigation -->
+    <link rel="icon" href="logo.png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Texte</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        soluta corrupti a exercitationem at dicta repudiandae quaerat cumque?
+        Voluptates aperiam suscipit soluta accusamus libero minima totam quod
+        enim magni voluptatum?
+      </p>
+      <p>
+        <em>em pour mettre en italique</em>
+        <strong>Strong pour mettre en gras</strong>
+        <span>L'élément en span ne revient pas à la ligne</span>
+      </p>
+    </header>
+    <section>
+      <div id="picture">
+        <h2>Photo</h2>
+        <img src="photo-1.jpg" alt="photo montagne" height="200" />
+      </div>
+
+      <div>
+        <h3>Liste</h3>
+        <ul>
+          <li>UL = unordered list</li>
+          <li>UL = unordered list</li>
+          <li>UL = unordered list</li>
+        </ul>
+        <ol>
+          <li>OL = ordered list</li>
+          <li>OL = ordered list</li>
+          <li>OL = ordered list</li>
+        </ol>
+      </div>
+
+      <div>
+        <h4>Tableaux</h4>
+
+        <table border="1" cellpadding="20" cellspacing="4" align="center">
+          <thead>
+            <!-- TR permet de faire des lignes -->
+            <tr>
+              <th>Col 1</th>
+              <th>Col 2</th>
+              <th>Col 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <!-- Rawspan permet d'allonger la cellule dans la verticalité -->
+              <td rowspan="2">Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+            </tr>
+            <tr>
+              <td>Cell 4</td>
+              <td>Cell 5</td>
+            </tr>
+            <tr>
+              <!-- Colspan fusionne les cellules dans la largeur -->
+              <td colspan="3">Cell 6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <h5><span>&#10155;</span>Liens</h5>
+        <a href="tableaux.html">Allez vers le tableau</a>
+        <br />
+        <a href="https://htmlcheatsheet.com" target="_blank">HTML Cheatsheet</a>
+        <br />
+        <i class="fas fa-balance-scale"></i
+        ><a
+          href="https://www.toptal.com/designers/htmlarrows/symbols/"
+          target="_blank"
+          >Symbols HTML</a
+        ><br />
+        <a href="https://iconmonstr.com/">Icon Monster</a><br />
+        <img src="icon.svg" alt="icon-backhoe" /><a
+          href="https://tablericons.com/"
+          >Tabler Icons</a
+        >
+      </div>
+
+      <div>
+        <h6>Vidéos</h6>
+        <video
+          src="video.mp4"
+          height="300"
+          autoplay
+          loop
+          controls
+          muted
+        ></video>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Formulaire</h2>
+      <form action="">
+        <label for="firstname">Prénom</label>
+        <input id="firstname" type="text" placeholder="ex : Denis" required /><br />
+        <input type="date" name="" id="" />
+
+        <label for="">Age</label>
+        <input
+          type="number"
+          name=""
+          min="0"
+          max="130"
+          value="18"
+          id="numberAge"
+          oninput="document.getElementById('rangeAge').value=this.value"
+        />
+        <input           
+          min="0"
+          max="130"
+          value="18" 
+          type="range" 
+          name="" 
+          id="rangeAge"
+          oninput="document.getElementById('numberAge').value=this.value">
+          <br>
+
+        <!-- Input select -->
+        <label for="">Genre</label>
+        <select id="">
+          <option value="femme">Femme</option>
+          <option selected="selected" value="homme">Homme</option>
+          <option value="autre">Autre</option>
+        </select>
+
+        <!-- input radio -->
+        <div>
+          <input type="radio" id="dog" name="pet">
+          <label for="dog">Chien</label>
+
+          <input type="radio" id="cat" name="pet">
+          <label for="cat">Chat</label>
+
+          <input type="radio" checked id="none" name="pet">
+          <label for="none">Aucun</label>
+        </div>
+
+        <!-- Input Checkbox -->
+        <div>
+          <input type="checkbox" name="" id="cgv">
+          <label for="cgv">J'accepte les cgv</label>
+        </div>
+
+        <textarea name="" id="" cols="30" rows="10" placeholder="Entrez votre message..."></textarea>
+        <br>
+
+        <!-- L'input de type submit permet de valider le formulaire -->
+        <input type="submit" value="Valider">
+      </form>
+
+      <div>
+        <a href="mailto:julien@gmail.com">Ecrivez moi !</a>
+        <br>
+        <a href="doc.txt" download="nom-du-fichier">Télécharger la notice</a>
+
+        <details>
+          <summary>Plus d'infos</summary>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ex quasi maxime veritatis expedita earum nobis cupiditate sequi recusandae ipsam perspiciatis, ea aut accusantium nulla iure tenetur dolorem sunt sit sint possimus eius fugit delectus quod asperiores. Accusantium, minus doloremque!</p>
+        </details>
+        <a href="#">
+          <button>Cliquez pour remonter tout en haut</button>
+        </a>
+        <a href="#picture">
+          <button>Cliquez pour remonter à l'image</button>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

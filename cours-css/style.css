@@ -1,0 +1,111 @@
+/* 2 façons d'ajouter du style */
+/* Utiliser import pour des projets rapides */
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&display=swap");
+
+/* Utilise font-face pour de vrais projets */
+@font-face {
+  font-family: "font-principal";
+  src: url(./font/Satisfy-Regular.ttf);
+}
+
+/* Régléages généraux */
+/* L'étoile sélectionne toutes les balises */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  /* Retire les bullet points des li */
+  list-style: none;
+}
+.box {
+  background: rgba(250, 128, 114, 0.74);
+  margin: 10px auto;
+  min-height: 120px;
+  width: 90%;
+  border-radius: 5px;
+  padding: 10px;
+}
+/* Réglages spécifiques */
+body {
+  background: url(./img/bg.jpg) fixed center/cover;
+  font-family: "font-principal", serif;
+  min-height: 100vh;
+}
+
+/* Les paramètres utiles pour un texte */
+h1 {
+  font-family: "Arvo", serif;
+  font-size: 4rem;
+  color: teal;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  /* Les ombres : axe-X, axe-Y, flou */
+  text-shadow: -4px 5px 16px #0000003d;
+}
+
+main {
+  min-height: 300px;
+  width: 90%;
+  background: rgba(75, 159, 255, 0.561);
+  /* Margin 0 auto pour centrer une boite */
+  margin: 10px auto 0;
+  box-shadow: 3px 6px 20px #0000005e;
+  border-radius: 20px;
+  border: 1px solid blue;
+  border-left: 2px solid skyblue;
+  /* Pour utiliser le backdrip filter : mettre de l'opacité */
+  backdrop-filter: blur(5px);
+}
+.absolute {
+  position: relative;
+}
+#circle {
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  background: rgb(0, 225, 255);
+  /* Centrer parfaitement un élément en absolute (top, left, transform + parent en "relative")  */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#cross {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.8rem;
+}
+#heart {
+  position: absolute;
+  top: 0px;
+  left: 245px;
+}
+#heart img {
+  height: 30px;
+}
+#edit {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  height: 30px;
+}
+.flex ul {
+  /* Le flex permet d'aligner équitablement les éléments */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex li {
+  height: 100px;
+  width: 100px;
+  background: lightblue;
+  margin: 2px;
+  /* Centrer parfaitement un élément dans une boite */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
