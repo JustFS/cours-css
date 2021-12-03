@@ -14,6 +14,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 li {
   /* Retire les bullet points des li */
   list-style: none;
@@ -32,9 +35,29 @@ body {
   font-family: "font-principal", serif;
   min-height: 100vh;
 }
+nav {
+  position: fixed;
+  width: 100%;
+  background: deeppink;
+  z-index: 10;
+  padding: 5px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+nav a {
+  text-decoration: none;
+  color: rgba(7, 14, 22, 0.561);
+}
+/* Changer le style d'un lien sur lequel on a déjà cliqué */
+nav a:visited {
+  color: white;
+}
 
 /* Les paramètres utiles pour un texte */
 h1 {
+  padding-top: 40px;
   font-family: "Arvo", serif;
   font-size: 4rem;
   color: teal;
@@ -170,4 +193,38 @@ input[type="submit"]:hover {
   background: darkblue;
   color: white;
   letter-spacing: 2px;
+}
+
+/* **************** RESPONSIVE *************** */
+
+/* La règle s'applique lorsque la largeur est inférieure à 740px */
+@media (max-width: 740px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 595px) {
+  #heart {
+    display: none;
+  }
+  .flex ul {
+    flex-direction: column;
+  }
+  form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "input1"
+      "input2"
+      "textarea"
+      "btn";
+  }
+}
+
+@media (max-width: 350px) {
+  input,
+  textarea {
+    width: 90%;
+  }
 }
