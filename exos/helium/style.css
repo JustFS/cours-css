@@ -17,14 +17,13 @@ body {
   min-height: 100vh;
 }
 nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 50% 50%;
   margin: 10px 20px;
 }
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 50%;
 }
 section {
   display: flex;
@@ -53,8 +52,8 @@ h1 {
 }
 footer {
   background: rgb(7, 7, 7);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 33% 67%;
   border-radius: 10px;
 }
 .footer-left {
@@ -74,9 +73,6 @@ footer {
   border-radius: 10px;
   letter-spacing: 1px;
   font-weight: bold;
-}
-.footer-right {
-  width: 67%;
 }
 .footer-right ul {
   display: flex;

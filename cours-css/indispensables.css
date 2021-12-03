@@ -1,0 +1,50 @@
+/* ******* FLEX ******** */
+
+/* Centrer un élément dans sa boite (enfant unique) */
+.parent-d-1-element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Répartir équitablement des éléments dans la page */
+.parent-de-plusieurs-enfants {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ************* GRID ************** */
+
+/* Répartir précisement des éléments dans la largeur  avec des tailles différentes*/
+.parent-des-elements {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+/* Créer des grilles complexes */
+.parent-des-elements {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-rows: 1fr 1fr 300px;
+  grid-template-areas:
+    "header header header"
+    "side main main"
+    "side footer footer";
+}
+.enfant-header {
+  grid-area: header;
+}
+
+/* ********** ABSOLUTE *********** */
+
+/* Centrer parfaitement un élément */
+.parent {
+  position: relative;
+}
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -58,6 +58,7 @@ main {
   /* Pour utiliser le backdrip filter : mettre de l'opacité */
   backdrop-filter: blur(5px);
 }
+/* *********************** ABSOLUTE ******************* */
 .absolute {
   position: relative;
 }
@@ -92,6 +93,8 @@ main {
   right: 30px;
   height: 30px;
 }
+
+/* ********************** FLEX ********************** */
 .flex ul {
   /* Le flex permet d'aligner équitablement les éléments */
   display: flex;
@@ -108,4 +111,63 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+.flex li img {
+  height: 100%;
+  /* Quand on intègre l'image depuis HTML il faut faire objectif-fit: cover */
+  object-fit: cover;
+}
+
+/* ****************** GRID ******************* */
+.grid ul {
+  display: grid;
+  grid-template-columns: 25% 25% 50px 1fr;
+}
+/* Méthode :nth-child() permet de selectionner l'enfant numéro ... */
+.grid li:nth-child(1) {
+  background: violet;
+}
+.grid li:nth-child(2) {
+  background: yellow;
+}
+.grid li:nth-child(3) {
+  background: sandybrown;
+}
+.grid li:nth-child(4) {
+  background: orangered;
+}
+
+form {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "input1 input2"
+    "textarea textarea"
+    "btn btn";
+  gap: 5px;
+}
+input,
+textarea {
+  height: 45px;
+  border: 1px solid darkblue;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "font-1";
+}
+textarea {
+  grid-area: textarea;
+  resize: none;
+}
+input[type="submit"] {
+  grid-area: btn;
+  cursor: pointer;
+  transition: 0.2s;
+}
+input[type="submit"]:hover {
+  background: darkblue;
+  color: white;
+  letter-spacing: 2px;
 }
