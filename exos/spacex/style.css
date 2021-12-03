@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css?family=Baumans|Megrim&display=swap");
+
+* {
+  font-family: "Baumans", Arial;
+}
+li {
+  list-style: none;
+}
+body {
+  background: url(./img/background.jpg) center/cover;
+  min-height: 100vh;
+  overflow: hidden;
+  color: rgb(250, 250, 250);
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(195, 34, 34, 0), rgba(0, 0, 0, 1));
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 100px;
+  border: solid 1px orange;
+  border-color: orange transparent transparent transparent;
+  border-radius: 45%/60px 100px 0 0;
+  top: 100px;
+  left: 60px;
+}
+header h2 {
+  font-family: "Megrim", cursive;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fa9e1e;
+  font-weight: 100;
+  text-shadow: 2px 2px 0 #84c1ff, 4px 4px 0 red, 4px 4px 3px white;
+  margin: 10px;
+}
+nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+nav li {
+  border-left: 3px solid white;
+  padding: 0 0 0 14px;
+}
+section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+}
+section div {
+  position: relative;
+}
+section h3 {
+  transform: translate(-50px, 50px);
+}
+section img {
+  margin: 0 auto;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 70px 63px -40px #494848;
+}
+section span {
+  transform: translate(80px, -30px);
+  display: block;
+}
+button {
+  margin: 40px auto;
+  display: block;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 10px;
+  /* Relative pour cloisonner l'élément en absolute */
+  position: relative;
+}
+button::after {
+  /* content et absolute sont obligatoires */
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 200px;
+  background: orange;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 90%;
+  padding: 0;
+}
