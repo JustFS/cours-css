@@ -56,9 +56,6 @@ footer {
   grid-template-columns: 33% 67%;
   border-radius: 10px;
 }
-.footer-left {
-  width: 33%;
-}
 .footer-left ul {
   display: flex;
   flex-direction: column;
@@ -83,4 +80,53 @@ footer {
 
 footer img {
   height: 60px;
+}
+
+/* ************** RESPONSIVE *************** */
+
+/* Tablette */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .main-left h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  footer {
+    grid-template-columns: 40% 60%;
+  }
+  footer img {
+    height: 35px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 570px) {
+  nav {
+    margin: 10px 5px;
+  }
+  nav li {
+    font-size: 0.7rem;
+  }
+  section {
+    flex-direction: column;
+  }
+  .main-left,
+  .main-right {
+    width: 100%;
+  }
+  .main-right img {
+    width: 65%;
+    margin: 0 auto;
+    display: block;
+  }
+  footer {
+    grid-template-columns: 1fr;
+  }
+  .footer-left ul {
+    align-items: center;
+  }
 }
