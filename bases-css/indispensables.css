@@ -4,7 +4,7 @@
 }
 .boite {
   margin: 20px auto;
-  display: block; /* Doit être en display block (ex: h1, p, div, section...) */
+  display: block; /* Si jamais il n'est pas en bloc de base (img, a, span, button...) */
 }
 
 /* ******* FLEX ******** */
