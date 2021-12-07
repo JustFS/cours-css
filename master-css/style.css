@@ -1,0 +1,48 @@
+/************* Variables *************/
+:root {
+  --main-color: pink;
+  --second-color: rgb(1, 1, 34);
+  --white: rgb(248, 248, 248);
+  --black: rgb(8, 8, 8);
+  --br: 20px;
+}
+
+/* Réglages généraux */
+/* Réglages de bases pour chaque projet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+/* Réglages spécifiques (dans l'ordre d'apparition HTML) */
+body {
+  background: var(--second-color);
+  color: var(--main-color);
+}
+
+/* Priorités */
+/* !important > id > classe > balise */
+h1 {
+  color: var(--white) !important;
+}
+.titre {
+  color: green;
+}
+#title {
+  color: rgb(216, 216, 3);
+}
+
+/* Sélecteurs CSS */
+.liste li:first-child {
+  color: var(--white);
+}
+.liste li:nth-child(2) {
+  color: orangered;
+}
+.liste li:last-child {
+  color: orchid;
+}

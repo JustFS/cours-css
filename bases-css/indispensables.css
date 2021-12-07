@@ -1,3 +1,12 @@
+/* Centrer un élément parfaitement horizontalement */
+.titre {
+  text-align: center;
+}
+.boite {
+  margin: 20px auto;
+  display: block; /* Doit être en display block (ex: h1, p, div, section...) */
+}
+
 /* ******* FLEX ******** */
 
 /* Centrer un élément dans sa boite (enfant unique) */
