@@ -22,6 +22,7 @@ li {
 body {
   background: var(--second-color);
   color: var(--main-color);
+  margin: 20px;
 }
 
 /* Priorités */
@@ -45,4 +46,71 @@ h1 {
 }
 .liste li:last-child {
   color: orchid;
+}
+
+/* Hover IMG */
+.img-container {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+.img-container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.img-container img:hover {
+  transform: scale(2);
+}
+
+/* Attribuer un comportement aux éléments qui ne sont PAS survolés */
+.not-hover {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.not-hover span {
+  font-size: 3rem;
+  background: skyblue;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0 20px;
+  transition: 0.4s ease;
+  /* user select empeche de sélectionner des éléments */
+  user-select: none;
+}
+.not-hover span:hover {
+  transform: scale(1.1);
+}
+.not-hover:hover span:not(:hover) {
+  transform: scale(0.9);
+  background: rgb(70, 110, 126);
+}
+/* Active change le style d'un élément sur lequel on clique */
+.not-hover span:active {
+  background: yellow;
+  transform: scale(5);
+}
+/* Selection */
+p::selection {
+  background: var(--white);
+  color: var(--black);
+}
+/* Checked permet de faire un booleen (true ou false) */
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked ~ label {
+  background: yellow;
+}
+label {
+  margin: 10px 0;
+  display: block;
+  background: var(--main-color);
+  color: var(--second-color);
 }

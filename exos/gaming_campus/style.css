@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.news {
+  background: rgb(238, 238, 238);
+  margin: 100px 0;
+}
+.main-news {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 10px;
+}
+/* > ne selectionne que les enfants directs */
+.main-news > div {
+  width: 25%;
+  padding-bottom: 40px;
+  position: relative;
+}
+.main-news img {
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px #888;
+}
+.main-news p {
+  line-height: 26px;
+}
+.link {
+  position: absolute;
+  bottom: 0;
+}
