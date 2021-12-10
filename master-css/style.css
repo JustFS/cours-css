@@ -23,7 +23,7 @@ body {
   background: var(--second-color);
   color: var(--main-color);
   margin: 20px;
-  min-height: 300vh;
+  min-height: 400vh;
 }
 
 /* Priorités */
@@ -188,4 +188,121 @@ input[type="text"]:focus {
   background: var(--main-color);
   top: 50%;
   right: -110%;
+}
+/* Animations / Keyframes */
+.animations div {
+  height: 100px;
+  width: 100px;
+  background: tomato;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 150px;
+}
+/* Scale */
+.animations div:nth-child(1):active {
+  animation: animScale 1s forwards;
+  /* Forwards laisse l'animation dans son état final */
+}
+@keyframes animScale {
+  to {
+    transform: scale(3);
+  }
+}
+/* Transform X */
+.animations div:nth-child(2) {
+  animation: animTranformX 2s infinite alternate;
+}
+@keyframes animTranformX {
+  to {
+    transform: translateX(150px);
+  }
+}
+/* Transform Y */
+.animations div:nth-child(3) {
+  animation: animTransformY 5s infinite linear;
+}
+@keyframes animTransformY {
+  25% {
+    transform: translateY(-150px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  75% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Rotate */
+.animations div:nth-child(4) {
+  animation: animRotate 0.1s infinite;
+}
+@keyframes animRotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Color */
+.animations div:nth-child(5):hover {
+  animation: animColor 2s forwards;
+}
+@keyframes animColor {
+  to {
+    filter: hue-rotate(180deg);
+  }
+}
+/* Width */
+.animations div:nth-child(6):hover {
+  animation: animWidth 3s forwards cubic-bezier(0.79, 0.2, 1, -0.14);
+}
+@keyframes animWidth {
+  100% {
+    width: 600px;
+  }
+}
+/* Keyframes Wesh alors */
+.keyframe {
+  background: linear-gradient(90deg, black 50%, yellow 50%);
+  height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: relative;
+}
+.keyframe h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: yellow;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  animation: move 5s linear infinite;
+  width: 380px;
+}
+@keyframes move {
+  0% {
+    top: 20px;
+  }
+  25% {
+    left: 180px;
+    top: 50%;
+  }
+  50% {
+    top: 95%;
+    left: 50%;
+  }
+  75% {
+    left: 80%;
+    top: 50%;
+  }
+  100% {
+    top: 20px;
+    left: 50%;
+  }
 }
