@@ -7,17 +7,19 @@
   --br: 20px;
 }
 
-/* Réglages généraux */
+/********************** Réglages généraux ***********************/
 /* Réglages de bases pour chaque projet */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 li {
   list-style: none;
 }
-
 /* Réglages spécifiques (dans l'ordre d'apparition HTML) */
 body {
   background: var(--second-color);
@@ -26,7 +28,36 @@ body {
   min-height: 400vh;
 }
 
-/* Priorités */
+/************************ Priorités *************************/
+nav {
+  position: fixed;
+  right: 0;
+}
+nav ul {
+  perspective: 300px;
+  margin: 20px;
+}
+nav li {
+  transform: rotatey(45deg) scaleX(1.3);
+  transition: 0.3s;
+  transform-origin: left;
+}
+nav li:hover {
+  transform: rotatey(3deg);
+}
+nav a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--white);
+  opacity: 0.5;
+}
+nav a:hover {
+  opacity: 1;
+}
+nav ul:hover li:not(:hover) {
+  opacity: 0.3;
+}
+
 /* !important > id > classe > balise */
 h1 {
   color: var(--white) !important;
