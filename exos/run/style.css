@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+  outline: none;
+}
+a,
+a:visited {
+  color: #000000;
+  text-decoration: none;
+}
+.button {
+  border: 1px solid #ccc;
+  background: transparent;
+  border-radius: 150px;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.button:hover {
+  border: 1px solid skyblue;
+  color: skyblue;
+}
+
+/* Réglages spéficiques */
+header {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+}
+.container p {
+  line-height: 36px;
+  margin: 45px 0 60px;
+  font-size: 1.25rem;
+}
+.img-banner {
+  background: url(./img/banner.jpg) right/cover;
+}
+
+.contact {
+  text-align: center;
+  padding: 60px 0;
+  border-top: 1px solid rgb(230, 230, 230);
+}
+.form-grid {
+  margin: 0 auto;
+  width: 85%;
+  max-width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50px 50px 60px 200px;
+  grid-template-areas:
+    "label1 label2"
+    "input1 input2"
+    "label3 label3"
+    "texta texta";
+  gap: 10px;
+}
+label {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+input,
+textarea {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid skyblue;
+}
+#mess {
+  grid-area: label3;
+}
+textarea {
+  grid-area: texta;
+  resize: none;
+}
+input[type="submit"] {
+  margin-top: 30px;
+}
+.icons-container {
+  margin: 100px;
+}
+.icons-container li {
+  list-style: none;
+  border: 1px solid rgb(209, 209, 209);
+  margin: 0 30px;
+  border-radius: 150px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons-container ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
