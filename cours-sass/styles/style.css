@@ -14,9 +14,19 @@
           box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: white;
+}
+
 body {
   background: #dadada;
   color: darkblue;
+  padding-top: 50px;
 }
 
 h1 {
@@ -56,6 +66,9 @@ h1 img {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (max-width: 560px) {
@@ -64,9 +77,6 @@ h1 img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -98,6 +108,9 @@ h1 img {
   min-height: 400px;
   background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
   margin: 0 auto;
+  border-radius: 8px;
+  -webkit-box-shadow: 14px 14px 0 orange;
+          box-shadow: 14px 14px 0 orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,9 +123,15 @@ h1 img {
 }
 
 .section1 .box p {
-  background: teal;
-  padding: 20px;
+  background: rgba(0, 128, 128, 0.724);
+  padding: 40px;
+  font-size: 1.8rem;
   display: inline-block;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.246);
+          box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.246);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 
 .section1 .grid {
@@ -126,5 +145,25 @@ h1 img {
   background: darkblue;
   margin: 10px;
   color: tomato;
+}
+
+nav {
+  background: darkblue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: tomato;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

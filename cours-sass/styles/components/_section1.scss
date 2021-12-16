@@ -1,11 +1,9 @@
 .section1 {
   ul {
-    display: flex;
-    justify-content: space-around;
+    @include flexChildren;
 
     @media screen and (max-width: 560px) {
       flex-direction: column;
-      align-items: center;
     }
 
     li {
@@ -32,12 +30,18 @@
     min-height: 400px;
     background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
     margin: 0 auto;
-    @include flexCenter();
+    border-radius: 8px;
+    box-shadow: 14px 14px 0 orange;
+    @include centerChild();
 
     p {
-      background: $color-2;
-      padding: 20px;
+      background: rgba(0, 128, 128, 0.724);
+      padding: 40px;
+      font-size: 1.8rem;
       display: inline-block;
+      border-radius: 5px;
+      box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.246);
+      backdrop-filter: blur(2px);
     }
   }
   .grid {

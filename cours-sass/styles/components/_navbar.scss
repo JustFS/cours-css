@@ -1,0 +1,12 @@
+nav {
+  background: $color-3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: $color-1;
+
+  ul {
+    @include flexChildren;
+  }
+}

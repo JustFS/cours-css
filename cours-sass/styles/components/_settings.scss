@@ -14,9 +14,16 @@ $color-1: tomato;
 $color-2: teal;
 $color-3: darkblue;
 
-@mixin flexCenter {
+// Centrer un enfant unique
+@mixin centerChild {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+// Aligner parfaitement des enfants
+@mixin flexChildren {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -29,10 +36,18 @@ $color-3: darkblue;
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
+a,
+a:visited {
+  color: white;
+}
 
 body {
   background: rgb(218, 218, 218);
   color: $color-3;
+  padding-top: 50px;
 }
 
 h1 {
