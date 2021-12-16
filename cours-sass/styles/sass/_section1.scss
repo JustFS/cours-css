@@ -1,0 +1,52 @@
+.section1 {
+  ul {
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (max-width: 560px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    li {
+      font-size: 2rem;
+      list-style: none;
+
+      &:hover {
+        color: $color-1;
+      }
+      &:first-child {
+        text-decoration: underline;
+      }
+      &:nth-child(2) {
+        text-decoration: underline wavy red;
+      }
+      &:last-child {
+        text-decoration: underline overline $color-3;
+      }
+    }
+  }
+
+  .box {
+    width: 70%;
+    min-height: 400px;
+    background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
+    margin: 0 auto;
+    @include flexCenter();
+
+    p {
+      background: $color-2;
+      padding: 20px;
+      display: inline-block;
+    }
+  }
+  .grid {
+    @include grid(25%, 75%, 0, 0);
+
+    div {
+      background: $color-3;
+      margin: 10px;
+      color: $color-1;
+    }
+  }
+}

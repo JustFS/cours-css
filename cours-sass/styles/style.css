@@ -8,9 +8,32 @@
   src: url(../assets/fonts/Corinthia-Bold.ttf);
 }
 
+* {
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #dadada;
+  color: darkblue;
+}
+
 h1 {
   color: teal;
   font-family: "font-1", sans-serif;
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  h1 {
+    font-size: 0.9rem;
+  }
 }
 
 h1:hover {
@@ -27,7 +50,7 @@ h1 img {
           transform: translateY(3px);
 }
 
-ul {
+.section1 ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,30 +58,42 @@ ul {
       justify-content: space-around;
 }
 
-ul li {
+@media screen and (max-width: 560px) {
+  .section1 ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.section1 ul li {
   font-size: 2rem;
   list-style: none;
 }
 
-ul li:hover {
+.section1 ul li:hover {
   color: tomato;
 }
 
-ul li:first-child {
+.section1 ul li:first-child {
   text-decoration: underline;
 }
 
-ul li:nth-child(2) {
+.section1 ul li:nth-child(2) {
   -webkit-text-decoration: underline wavy red;
           text-decoration: underline wavy red;
 }
 
-ul li:last-child {
+.section1 ul li:last-child {
   -webkit-text-decoration: underline overline darkblue;
           text-decoration: underline overline darkblue;
 }
 
-.box {
+.section1 .box {
   width: 70%;
   min-height: 400px;
   background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
@@ -74,20 +109,20 @@ ul li:last-child {
           align-items: center;
 }
 
-.box p {
+.section1 .box p {
   background: teal;
   padding: 20px;
   display: inline-block;
 }
 
-.grid {
+.section1 .grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 25% 75% 0 0;
       grid-template-columns: 25% 75% 0 0;
 }
 
-.grid div {
+.section1 .grid div {
   background: darkblue;
   margin: 10px;
   color: tomato;

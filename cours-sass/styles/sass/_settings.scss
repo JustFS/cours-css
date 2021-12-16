@@ -1,0 +1,59 @@
+// FONTS
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/Corinthia-Bold.ttf);
+}
+$font-1: "font-1", sans-serif;
+$font-2: "font-2", serif;
+
+$color-1: tomato;
+$color-2: teal;
+$color-3: darkblue;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid($col1, $col2, $col3, $col4) {
+  display: grid;
+  grid-template-columns: $col1 $col2 $col3 $col4;
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(218, 218, 218);
+  color: $color-3;
+}
+
+h1 {
+  color: $color-2;
+  font-family: $font-1;
+
+  @media screen and (max-width: 700px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 300px) {
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    color: $color-1;
+  }
+  &:active {
+    color: $color-3;
+  }
+  img {
+    height: 30px;
+    transform: translateY(3px);
+  }
+}
