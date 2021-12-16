@@ -1,0 +1,88 @@
+// FONTS
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/Corinthia-Bold.ttf);
+}
+$font-1: "font-1", sans-serif;
+$font-2: "font-2", serif;
+
+$color-1: tomato;
+$color-2: teal;
+$color-3: darkblue;
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid($col1, $col2, $col3, $col4) {
+  display: grid;
+  grid-template-columns: $col1 $col2 $col3 $col4;
+}
+
+h1 {
+  color: $color-2;
+  font-family: $font-1;
+
+  &:hover {
+    color: $color-1;
+  }
+  &:active {
+    color: $color-3;
+  }
+  img {
+    height: 30px;
+    transform: translateY(3px);
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+
+  li {
+    font-size: 2rem;
+    list-style: none;
+
+    &:hover {
+      color: $color-1;
+    }
+    &:first-child {
+      text-decoration: underline;
+    }
+    &:nth-child(2) {
+      text-decoration: underline wavy red;
+    }
+    &:last-child {
+      text-decoration: underline overline $color-3;
+    }
+  }
+}
+
+.box {
+  width: 70%;
+  min-height: 400px;
+  background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
+  margin: 0 auto;
+  @include flexCenter();
+
+  p {
+    background: $color-2;
+    padding: 20px;
+    display: inline-block;
+  }
+}
+.grid {
+  @include grid(25%, 75%, 0, 0);
+
+  div {
+    background: $color-3;
+    margin: 10px;
+    color: $color-1
+  }
+}

@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "font-2";
+  src: url(../assets/fonts/Corinthia-Bold.ttf);
+}
+
+h1 {
+  color: teal;
+  font-family: "font-1", sans-serif;
+}
+
+h1:hover {
+  color: tomato;
+}
+
+h1:active {
+  color: darkblue;
+}
+
+h1 img {
+  height: 30px;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+ul li {
+  font-size: 2rem;
+  list-style: none;
+}
+
+ul li:hover {
+  color: tomato;
+}
+
+ul li:first-child {
+  text-decoration: underline;
+}
+
+ul li:nth-child(2) {
+  -webkit-text-decoration: underline wavy red;
+          text-decoration: underline wavy red;
+}
+
+ul li:last-child {
+  -webkit-text-decoration: underline overline darkblue;
+          text-decoration: underline overline darkblue;
+}
+
+.box {
+  width: 70%;
+  min-height: 400px;
+  background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box p {
+  background: teal;
+  padding: 20px;
+  display: inline-block;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 75% 0 0;
+      grid-template-columns: 25% 75% 0 0;
+}
+
+.grid div {
+  background: darkblue;
+  margin: 10px;
+  color: tomato;
+}
+/*# sourceMappingURL=style.css.map */
