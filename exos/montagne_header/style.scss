@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+body {
+  background: url(./bg.jpg) center/cover;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #1e252d;
+    animation: animBefore 1.5s ease forwards;
+    animation-delay: 0.3s;
+
+    @keyframes animBefore {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
+header {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: headerAnim 1.5s forwards;
+
+  @keyframes headerAnim {
+    100% {
+      transform: translateY(-40px);
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  p {
+    margin: 40px auto 60px;
+    width: 85%;
+    font-style: italic;
+  }
+  span {
+    transform: rotate(90deg);
+    border: 1px solid white;
+    border-radius: 150px;
+    height: 60px;
+    width: 60px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+main {
+  width: 85%;
+  margin: -65px auto 30px;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.15);
+    height: 65px;
+    z-index: 100;
+    position: relative;
+
+    ul {
+      display: flex;
+      align-items: center;
+
+      &.nav-left {
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &:hover li:not(:hover) {
+          background: none;
+          color: white;
+        }
+
+        li {
+          padding: 0 15px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          transition: 0.2s;
+
+          &:first-child {
+            background: white;
+            color: black;
+          }
+
+          &:hover {
+            background: white;
+            color: black;
+          }
+        }
+      }
+      &.nav-right {
+        font-size: 1.3rem;
+        min-width: 100px;
+        width: 25%;
+        max-width: 300px;
+        justify-content: space-around;
+        font-weight: bold;
+      }
+    }
+  }
+  .section1 {
+    background: white;
+    min-height: 600px;
+  }
+}
