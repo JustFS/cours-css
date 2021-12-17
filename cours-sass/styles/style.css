@@ -1,11 +1,11 @@
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+  src: url(../assets/assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
 }
 
 @font-face {
   font-family: "font-2";
-  src: url(../assets/fonts/Corinthia-Bold.ttf);
+  src: url(../assets/assets/fonts/Corinthia-Bold.ttf);
 }
 
 * {
@@ -106,7 +106,7 @@ h1 img {
 .section1 .box {
   width: 70%;
   min-height: 400px;
-  background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
+  background: url(../assets/assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
   margin: 0 auto;
   border-radius: 8px;
   -webkit-box-shadow: 14px 14px 0 orange;

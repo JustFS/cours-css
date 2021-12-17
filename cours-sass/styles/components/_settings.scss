@@ -1,11 +1,13 @@
+$path-css: "../assets/";
+
 // FONTS
 @font-face {
   font-family: "font-1";
-  src: url(../assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+  src: url(#{$path-css}assets/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
 }
 @font-face {
   font-family: "font-2";
-  src: url(../assets/fonts/Corinthia-Bold.ttf);
+  src: url(#{$path-css}assets/fonts/Corinthia-Bold.ttf);
 }
 $font-1: "font-1", sans-serif;
 $font-2: "font-2", serif;

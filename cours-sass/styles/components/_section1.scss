@@ -28,7 +28,8 @@
   .box {
     width: 70%;
     min-height: 400px;
-    background: url(../assets/img/pexels-tim-samuel-5845336.jpg) center/cover;
+    background: url(#{$path-css}assets/img/pexels-tim-samuel-5845336.jpg)
+      center/cover;
     margin: 0 auto;
     border-radius: 8px;
     box-shadow: 14px 14px 0 orange;
