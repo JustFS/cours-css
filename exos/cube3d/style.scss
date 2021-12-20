@@ -1,0 +1,51 @@
+$size: 300px;
+
+.cube {
+  margin: 140px auto 0;
+  width: $size;
+  height: $size;
+  transform-style: preserve-3d;
+  // transform: rotateY(30deg) rotateZ(30deg);
+  animation: spin 20s infinite linear;
+
+  div {
+    opacity: 0.85;
+    position: absolute;
+    width: $size;
+    height: $size;
+
+    &:nth-child(1) {
+      background: yellow;
+      transform: translateZ(calc(#{$size} / 2));
+    }
+    &:nth-child(2) {
+      background: red;
+      transform: rotateX(-270deg) translateY(calc(-1 * (#{$size} / 2)));
+      transform-origin: top;
+    }
+    &:nth-child(3) {
+      background: green;
+      transform: rotateX(270deg) translateY(calc(#{$size} / 2));
+      transform-origin: bottom;
+    }
+    &:nth-child(4) {
+      background: blue;
+      transform: rotateY(-270deg) translateX(calc(#{$size} / 2));
+      transform-origin: right;
+    }
+    &:nth-child(5) {
+      background: orange;
+      transform: rotateY(270deg) translateX(calc(-1 * (#{$size} / 2)));
+      transform-origin: left;
+    }
+    &:nth-child(6) {
+      background: orchid;
+      transform: rotateY(-180deg) translateZ(calc(#{$size} / 2));
+    }
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
