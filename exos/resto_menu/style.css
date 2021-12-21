@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.discover-container {
+  text-align: center;
+  background: #21201e;
+  color: #eee;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.discover-container:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 620px;
+  background: url(./img/bg-menu-01.jpg) center/cover;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: -330px;
+}
+
+.discover-container h2 {
+  color: #a67245;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 60px 0 30px;
+}
+
+.discover-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 50%;
+  margin: 30px auto;
+}
+
+.discover-container ul li {
+  border-bottom: 1px solid rgba(238, 238, 238, 0.6);
+  padding-bottom: 8px;
+}
+
+.discover-container .meals {
+  position: relative;
+  background: #fbfaf6;
+  color: #222;
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+  border-top: 4px solid #af7746;
+  padding: 15px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .discover-container .meals {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.discover-container .meals .meal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 60% 15%;
+      grid-template-columns: 25% 60% 15%;
+  border-bottom: 1px dashed rgba(128, 128, 128, 0.18);
+  padding: 30px 0;
+  margin: 0 20px;
+}
+
+.discover-container .meals .meal img {
+  border-radius: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.discover-container .meals .meal .meal-text {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 10px;
+}
+
+.discover-container .meals .meal .meal-text h3 {
+  text-transform: uppercase;
+  color: #222;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.discover-container .meals .meal > p {
+  color: #a67245;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.1rem;
+}
+/*# sourceMappingURL=style.css.map */
