@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.events {
+  background: #21201e;
+  padding: 50px 0 90px;
+}
+
+.events .events-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.events .events-container h2 {
+  font-size: 2.5rem;
+  color: #a69045;
+  font-weight: 100;
+}
+
+.events .events-container h4 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  font-weight: 900;
+  color: #eee;
+  margin-top: -12px;
+}
+
+.events .events-container img {
+  margin: 40px 0;
+}
+
+.events .events-container .event-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 58% 1fr;
+      grid-template-columns: 58% 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "event1 event3" "event2 event3";
+  gap: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .events .events-container .event-grid {
+    display: block;
+  }
+  .events .events-container .event-grid > div {
+    margin: 20px;
+  }
+}
+
+.events .events-container .event-grid .date-content {
+  background: #333;
+  height: 86px;
+  width: 86px;
+  margin: 0 auto;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 22px;
+}
+
+.events .events-container .event-grid .date-content h6 {
+  font-size: 1.2rem;
+}
+
+.events .events-container .event-grid .infos {
+  background: #eee;
+}
+
+.events .events-container .event-grid .infos h3 {
+  letter-spacing: 1px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-left: 8px;
+}
+
+.events .events-container .event-grid .infos p {
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+.events .events-container .event-grid .infos p i {
+  margin-right: 3px;
+  font-size: 0.7rem;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.events .events-container .event-grid .infos p i:last-child {
+  margin-left: 10px;
+}
+
+.events .events-container .event-grid .infos h5 {
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.events .events-container .event-grid .event-left {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 39% 61%;
+      grid-template-columns: 39% 61%;
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .events .events-container .event-grid .event-left {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.events .events-container .event-grid .event-left .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.events .events-container .event-grid .event-left .infos {
+  padding: 30px 20px;
+}
+
+.events .events-container .event-grid .event-1 .date {
+  background: url(./img/event-01.jpg) center/cover;
+}
+
+.events .events-container .event-grid .event-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: event2;
+}
+
+.events .events-container .event-grid .event-2 .date {
+  background: url(./img/event-02.jpg) center/cover;
+}
+
+.events .events-container .event-grid .event-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: event3;
+  background: url(./img/event-03.jpg) center/cover;
+  padding: 25px;
+}
+
+.events .events-container .event-grid .event-3 .infos {
+  height: 100%;
+  padding: 0 12px;
+}
+
+.events .events-container .event-grid .event-3 .infos h3 {
+  margin: 40px 0 15px;
+}
+
+.events .events-container .event-grid .event-3 .infos h5 {
+  padding: 45px;
+}
+/*# sourceMappingURL=style.css.map */

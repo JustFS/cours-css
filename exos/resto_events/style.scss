@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.events {
+  background: #21201e;
+  padding: 50px 0 90px;
+
+  .events-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.5rem;
+      color: rgb(166, 144, 69);
+      font-weight: 100;
+    }
+    h4 {
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-weight: 900;
+      color: #eee;
+      margin-top: -12px;
+    }
+    img {
+      margin: 40px 0;
+    }
+    .event-grid {
+      display: grid;
+      grid-template-columns: 58% 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "event1 event3"
+        "event2 event3";
+      gap: 20px;
+
+      @media screen and (max-width: 700px) {
+        display: block;
+
+        > div {
+          margin: 20px;
+        }
+      }
+
+      .date-content {
+        background: #333;
+        height: 86px;
+        width: 86px;
+        margin: 0 auto;
+        color: #eee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        line-height: 22px;
+
+        h6 {
+          font-size: 1.2rem;
+        }
+      }
+      .infos {
+        background: #eee;
+
+        h3 {
+          letter-spacing: 1px;
+          font-size: 1.3rem;
+          font-weight: 500;
+          padding-left: 8px;
+        }
+        p {
+          font-size: 0.9rem;
+          color: gray;
+          margin-top: 20px;
+          letter-spacing: 1px;
+
+          i {
+            margin-right: 3px;
+            font-size: 0.7rem;
+            transform: translateY(-2px);
+
+            &:last-child {
+              margin-left: 10px;
+            }
+          }
+        }
+        h5 {
+          letter-spacing: 2px;
+          margin-top: 25px;
+        }
+      }
+      .event-left {
+        display: grid;
+        grid-template-columns: 39% 61%;
+        text-align: left;
+
+        @media screen and (max-width: 600px) {
+          grid-template-columns: 1fr;
+        }
+
+        .date {
+          display: flex;
+          align-items: center;
+        }
+        .infos {
+          padding: 30px 20px;
+        }
+      }
+      .event-1 {
+        .date {
+          background: url(./img/event-01.jpg) center/cover;
+        }
+      }
+
+      .event-2 {
+        grid-area: event2;
+
+        .date {
+          background: url(./img/event-02.jpg) center/cover;
+        }
+      }
+      .event-3 {
+        grid-area: event3;
+        background: url(./img/event-03.jpg) center/cover;
+        padding: 25px;
+
+        .infos {
+          height: 100%;
+          padding: 0 12px;
+
+          h3 {
+            margin: 40px 0 15px;
+          }
+          h5 {
+            padding: 45px;
+          }
+        }
+      }
+    }
+  }
+}
